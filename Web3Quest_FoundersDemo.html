@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web 3.0 Quest – Founder's Demo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at top, #001f3f, #000814);
+      color: #ffffff;
+      margin: 0; padding: 0;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .demo-links {
+      margin-top: 2rem;
+      display: flex; flex-direction: column; gap: 1rem;
+      width: 100%;
+      max-width: 600px;
+    }
+    .link-box {
+      background-color: #003366;
+      border: 1px solid #0055cc;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+    .link-box:hover {
+      background-color: #0055cc;
+    }
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Web 3.0 Quest</h1>
+    <p>Founder's Demo Access – Quantum Nexus Technologies Ltd</p>
+  </header>
+
+  <section class="demo-links">
+    <div class="link-box"><a href="demo/index.html" target="_blank">Enter Founder's Demo (Live Preview)</a></div>
+    <div class="link-box"><a href="build/Web3QuestDemo.zip" download>Download Latest ZIP Build</a></div>
+    <div class="link-box"><a href="https://github.com/quantumhud/Web3Quest" target="_blank">GitHub Repo</a></div>
+    <div class="link-box"><a href="assets/GrantDeck.pdf" target="_blank">Grant Deck PDF</a></div>
+    <div class="link-box"><a href="assets/VisionkeepersCodex.pdf" target="_blank">Visionkeeper’s Codex</a></div>
+  </section>
+
+  <!-- Preload audio for smooth user experience -->
+  <audio id="ambientAudio" preload="auto" loop>
+    <source src="audio/ambient-loop.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    // Optional: Autoplay ambient loop after user interaction
+    document.body.addEventListener("click", () => {
+      const audio = document.getElementById("ambientAudio");
+      if (audio.paused) {
+        audio.play().catch(e => console.log("Autoplay blocked"));
+      }
+    });
+  </script>
+</body>
+</html>
